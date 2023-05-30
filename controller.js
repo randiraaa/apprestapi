@@ -60,3 +60,16 @@ exports.updateData = (req, res) => {
     }
   });
 };
+
+// Menghapus Data Berdasarkan ID Mahasiswa
+exports.deleteData = (req, res) => {
+  let id = req.params.id;
+
+  connection.query("DELETE FROM mahasiswa WHERE id_mahasiswa = ?", [id], (error, rows, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      response.ok("Data Berhasil Dihapus!", res);
+    }
+  });
+};
