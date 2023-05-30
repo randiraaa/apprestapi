@@ -17,15 +17,3 @@ exports.displayData = (req, res) => {
     }
   });
 };
-
-// Menampulkan Data Berdasarkan ID
-exports.displayDataId = (req, res) => {
-  let id = req.params.id;
-  connection.query("SELECT * FROM mahasiswa WHERE id_mahasiswa = ?", [id], (error, rows, fields) => {
-    if (error) {
-      console.log(error);
-    } else {
-      response.ok(rows, res);
-    }
-  });
-};
