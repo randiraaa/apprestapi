@@ -7,4 +7,5 @@ module.exports = (app) => {
   app.route("/data").get(jsonku.displayData);
   app.route("/data/:id").get(jsonku.displayDataId);
   app.route("/add").post(jsonku.addData);
+  app.route("/update/:id").put(jsonku.updateData);
 };

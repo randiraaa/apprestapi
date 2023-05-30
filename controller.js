@@ -40,7 +40,23 @@ exports.addData = (req, res) => {
     if (error) {
       console.log(error);
     } else {
-      response.ok("Add Data Succes!", res);
+      response.ok("Add Data Berhasil!", res);
+    }
+  });
+};
+
+// Mengubah Data Berdasarkan ID Mahasiswa
+exports.updateData = (req, res) => {
+  let id = req.params.id;
+  let nim = req.body.nim;
+  let nama = req.body.nama;
+  let jurusan = req.body.jurusan;
+
+  connection.query("UPDATE mahasiswa SET nim=?, nama=?, jurusan=? WHERE id_mahasiswa=?", [nim, nama, jurusan, id], (error, rows, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      response.ok("Update Data Berhasil!", res);
     }
   });
 };
