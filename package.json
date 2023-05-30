@@ -1,0 +1,23 @@
+{
+  "name": "apprestapi",
+  "version": "1.0.0",
+  "description": "Dasar REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randiraaa/apprestapi.git"
+  },
+  "keywords": [
+    "restapi",
+    "nodejs"
+  ],
+  "author": "Randi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/randiraaa/apprestapi/issues"
+  },
+  "homepage": "https://github.com/randiraaa/apprestapi#readme"
+}
