@@ -28,6 +28,7 @@ exports.registrasi = (req, res) => {
       if (rows.length == 0) {
         let query = "INSERT INTO ?? SET ?";
         let table = ["user"];
+
         query = mysql.format(query, table);
         connection.query(query, post, (error, rows) => {
           if (error) {
